@@ -1,0 +1,14 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    ascii:
+      failed: ~
+      succeeded: ~
+    tasks:
+      ##behat: ~
+      #composer: ~
+      #doctrine_orm: ~
+      phpcs: ~
+      phpcsfixer2: ~
+      phpunit: ~
+      phpversion: ~
