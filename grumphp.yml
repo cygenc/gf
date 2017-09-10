@@ -8,7 +8,7 @@ parameters:
       ##behat: ~
       #composer: ~
       #doctrine_orm: ~
+      #phpcsfixer2: ~
       phpcs: ~
-      phpcsfixer2: ~
       phpunit: ~
       phpversion: ~
