@@ -9,6 +9,6 @@ parameters:
       #composer: ~
       #doctrine_orm: ~
       #phpcsfixer2: ~
-      phpcs: ~
-      phpunit: ~
+      #phpcs: ~
+      #phpunit: ~
       phpversion: ~
