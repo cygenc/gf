@@ -4,8 +4,14 @@ namespace Tests\Framework;
 use PHPUnit\Framework\TestCase;
 use Framework\Renderer;
 
+/**
+ * Class RendererTest
+ */
 class RendererTest extends TestCase
 {
+    /**
+     * @var
+     */
     private $renderer;
 
     public function setUp()

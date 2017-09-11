@@ -1,10 +1,16 @@
 <?php
 namespace Framework;
 
+/**
+ * Class Renderer
+ */
 class Renderer
 {
     const DEFAULT_NAMESPACE = '__MAIN';
 
+    /**
+     * @var array
+     */
     private $paths = [];
 
     /**
@@ -61,16 +67,28 @@ class Renderer
         $this->globals[$key] = $value;
     }
 
+    /**
+     * @param string $view
+     * @return bool
+     */
     private function hasNamespace(string $view): bool
     {
         return $view[0] === '@';
     }
 
+    /**
+     * @param string $view
+     * @return string
+     */
     private function getNamespace(string $view): string
     {
         return substr($view, 1, strpos($view, '/') - 1);
     }
 
+    /**
+     * @param string $view
+     * @return string
+     */
     private function replaceNamespace(string $view): string
     {
         $namespace = $this->getNamespace($view);

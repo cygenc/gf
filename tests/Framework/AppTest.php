@@ -7,6 +7,9 @@ use Framework\App;
 use App\Blog\BlogModule;
 use Tests\Framework\Modules\ErroredModule;
 
+/**
+ * Class AppTest
+ */
 class AppTest extends TestCase
 {
     public function testRedirectTrailingSlash()

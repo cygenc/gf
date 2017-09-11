@@ -5,8 +5,13 @@ use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Psr7\ServerRequest;
 use Framework\Router;
 
+/**
+ * Class RouterTest
+ */
 class RouterTest extends TestCase
 {
+    private $router;
+
     public function setUp()
     {
         $this->router = new Router();

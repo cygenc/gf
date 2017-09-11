@@ -2,8 +2,8 @@
 namespace Framework\Router;
 
 /**
-* Class Route
-*/
+ * Class Route
+ */
 class Route
 {
     /**
@@ -21,6 +21,12 @@ class Route
     */
     private $params;
 
+    /**
+     * Route constructor.
+     * @param string $name
+     * @param callable $callable
+     * @param array $params
+     */
     public function __construct(string $name, callable $callable, array $params)
     {
         $this->name = $name;
@@ -29,7 +35,7 @@ class Route
     }
 
     /**
-    * @return string[]
+    * @return string
     */
     public function getName(): string
     {
