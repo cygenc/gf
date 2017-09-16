@@ -2,12 +2,12 @@
 namespace Tests\Framework;
 
 use PHPUnit\Framework\TestCase;
-use Framework\Renderer;
+use Framework\Renderer\PHPRenderer;
 
 /**
- * Class RendererTest
+ * Class PHPRendererTest
  */
-class RendererTest extends TestCase
+class PHPRendererTest extends TestCase
 {
     /**
      * @var
@@ -16,8 +16,7 @@ class RendererTest extends TestCase
 
     public function setUp()
     {
-        $this->renderer = new Renderer();
-        $this->renderer->addPath(__DIR__ . '/views');
+        $this->renderer = new PHPRenderer(__DIR__ . '/views');
     }
 
     public function testRenderTheRightPath()

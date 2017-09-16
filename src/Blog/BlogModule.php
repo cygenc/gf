@@ -1,10 +1,10 @@
 <?php
 namespace App\Blog;
 
+use Framework\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Framework\Router;
-use Framework\Renderer;
 
 /**
  * Class BlogModule
@@ -17,11 +17,11 @@ class BlogModule
     private $renderer;
 
     /**
-     * BlogModule constructor
+     * BlogModule constructor.
      * @param Router $router
-     * @param Renderer $renderer
+     * @param RendererInterface $renderer
      */
-    public function __construct(Router $router, Renderer $renderer)
+    public function __construct(Router $router, RendererInterface $renderer)
     {
         $this->renderer = $renderer;
         $this->renderer->addPath('blog', __DIR__ . '/views');

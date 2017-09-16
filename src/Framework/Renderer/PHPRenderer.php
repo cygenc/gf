@@ -1,10 +1,10 @@
 <?php
-namespace Framework;
+namespace Framework\Renderer;
 
 /**
- * Class Renderer
+ * Class PHPRenderer
  */
-class Renderer
+class PHPRenderer implements RendererInterface
 {
     const DEFAULT_NAMESPACE = '__MAIN';
 
@@ -14,13 +14,24 @@ class Renderer
     private $paths = [];
 
     /**
-      * Variables globalement accessibles pour toues les vues
+      * Variables globales accessibles pour toutes les vues
       * @var array
     */
     private $globals = [];
 
     /**
-      * Permet de rajouter un chemin pour charger des vues
+     * Renderer constructor.
+     * @param null|string $defaultPath
+     */
+    public function __construct(?string $defaultPath = null)
+    {
+        if (null !== $defaultPath) {
+            $this->addPath($defaultPath);
+        }
+    }
+
+    /**
+      * Permet d'ajouter un chemin pour charger des vues
       * @param string $namespace
       * @param null|string $path
     */
@@ -58,7 +69,7 @@ class Renderer
     }
 
     /**
-      * Permet de rajouter des variables globales à toutes les vues
+      * Permet d'ajouter des variables globales à toutes les vues
       * @param string $key
       * @param mixed $value
     */
